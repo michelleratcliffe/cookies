@@ -17,30 +17,38 @@ button {
   background-color: white;
 }
 .timerBtn:hover > .cookieMe {
-  background-color: white;
+  /* background-color: white; */
   width: 120px;
   height: 120px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .main {
-  display: flexbox;
-  justify-content: space-evenly;
+  display: flex;
+  gap: 20px;
 }
 .cookieInfo {
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  text-align: center;
 }
-.cookieInfo div {
-  /* margin: 0;
-  padding: 0; */
+
+.cookieInfo h1 {
+  font-size: 3rem;
+  background-image: "./assets/logo.jpg";
+  background: no-repeat;
 }
 
 .shoppingCart {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   width: 80%;
+  margin: 50px;
+}
+
+.shoppingCart > h2 {
+  text-align: center;
 }
 .shoppingCart > p {
-  /* display: inline-flex; */
+  display: grid;
 }
 .btnBuy {
   background-color: paleturquoise;
@@ -54,3 +62,45 @@ button {
   width: 200px;
   display: flex;
 }
+.cartStuffs {
+  display: grid;
+  grid-template-columns: 100% 100% 100% 100%;
+  grid-template-rows: auto;
+  padding: 10px;
+}
+
+.cookieBtn {
+  height: 205px;
+  width: 205px;
+  background: no-repeat;
+  background-position: -140px -580px;
+  > img {
+    margin: 38px;
+    width: 130px;
+    height: 130px;
+    border-radius: 130px;
+    animation: rotate-animation 10s infinite linear;
+  }
+}
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.dark {
+    background-color: #222222;
+    color: #fefdf4;
+  }
+  
+  .theme {
+    background-color: #fefdf4;
+    color: #222222;
+  }

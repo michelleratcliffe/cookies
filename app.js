@@ -1,3 +1,5 @@
+// return;
+
 //Set variables
 let cookieCount = 0;
 let cookiesPerSecond = 1;
@@ -15,6 +17,7 @@ const cookieImage = document.getElementById("cookieBtn");
 const cartStuffs = document.getElementById("cartStuffs");
 
 // Update the cookie count when I click
+// you can add a sound without the controls and then just call it when someone clicks on a button
 cookieImage.addEventListener("click", function () {
   cookieCount++;
   var cookieCrunch = document.getElementById("cookieCrunch");
@@ -38,7 +41,7 @@ function updateStorage() {
 // makes it tick over based on what interval is set 1000
 function update() {
   cookieCount += cookiesPerSecond;
-  //   console.log(cookieCount);
+  cookiesPerSecond;
   updateUI();
   updateStorage();
 }
@@ -50,10 +53,11 @@ function loadGame() {
     // if there is something in cookieCount and cookiesPerSecond then update our variables
     localStorage.getItem("cookieCount") != null &&
     localStorage.getItem("cookiesPerSecond") != null
-  )
+  ) {
     // store the cookie information
     cookieCount = JSON.parse(localStorage.getItem("cookieCount"));
-  cookiesPerSecond = JSON.parse(localStorage.getItem("cookiesPerSecond"));
+    cookiesPerSecond = JSON.parse(localStorage.getItem("cookiesPerSecond"));
+  }
 }
 
 //call when page runs to save values to localstorage
@@ -100,11 +104,23 @@ function displayUpgrades(arrayofUpgrades) {
     cartStuffs.appendChild(increaseTag);
     cartStuffs.appendChild(buyBtn);
 
-    //display how many times purchased
-
-    console.log(upgrades);
+    buyBtn.addEventListener("click", () => {
+      if (cookieCount != null && cookieCount >= upgrades.cost) {
+        cookieCount -= upgrades.cost;
+        cookiesPerSecond += upgrades.increase;
+        update();
+      } else {
+        let nope = upgrades.cost - cookieCount;
+        alert(`Get more cookies first`);
+      }
+    });
   });
 }
 
-// you can add a sound without the controls and then just call it when someone clicks on a button
+//make the buy button work
+
 // animate the cookie
+
+//display how many times purchased
+
+//localStorage.clear();
