@@ -1,5 +1,5 @@
-// return;
-
+// return; //instead of localStorage.clear();
+let theme = "darkSide";
 //Set variables
 let cookieCount = 0;
 let cookiesPerSecond = 1;
@@ -41,7 +41,7 @@ function updateStorage() {
 // makes it tick over based on what interval is set 1000
 function update() {
   cookieCount += cookiesPerSecond;
-  cookiesPerSecond;
+  //   cookiesPerSecond;
   updateUI();
   updateStorage();
 }
@@ -108,6 +108,7 @@ function displayUpgrades(arrayofUpgrades) {
       if (cookieCount != null && cookieCount >= upgrades.cost) {
         cookieCount -= upgrades.cost;
         cookiesPerSecond += upgrades.increase;
+
         update();
       } else {
         let nope = upgrades.cost - cookieCount;
@@ -117,10 +118,11 @@ function displayUpgrades(arrayofUpgrades) {
   });
 }
 
-//make the buy button work
+// const lightside = document.getElementById("lightside");
 
-// animate the cookie
+// lightside.addEventListener("click", function myFunction() {
+//   var element = document.body;
+//   element.classList.toggle("lightside");
+// });
 
 //display how many times purchased
-
-//localStorage.clear();

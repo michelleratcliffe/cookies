@@ -1,3 +1,22 @@
+body {
+  padding: 25px;
+  background-color: black;
+  color: white;
+  /* font-size: 25px; */
+}
+
+.lightside {
+  background-color: white;
+  color: black;
+}
+
+.darkside {
+  /* background-image: "cookieBG.png";
+   */
+  background-color: #df0813;
+  color: white;
+}
+
 .cookieMe {
   width: 100px;
   height: 100px;
@@ -94,13 +113,16 @@ button {
   }
 }
 
-
 .dark {
-    background-color: #222222;
-    color: #fefdf4;
-  }
-  
-  .theme {
-    background-color: #fefdf4;
-    color: #222222;
-  }
+  background-color: #222222;
+  color: #fefdf4;
+}
+
+.theme {
+  background-color: #fefdf4;
+  color: #222222;
+}
+.light {
+  background-color: #629ef8;
+  color: #222222;
+}
