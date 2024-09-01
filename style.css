@@ -1,0 +1,56 @@
+.cookieMe {
+  width: 100px;
+  height: 100px;
+  background-color: none;
+}
+.cookieMe:hover {
+  width: 150px;
+  height: 150px;
+}
+
+button {
+  background-color: none;
+  border: none;
+}
+
+.timerBtn {
+  background-color: white;
+}
+.timerBtn:hover > .cookieMe {
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  border: 2px solid red;
+}
+
+.main {
+  display: flexbox;
+  justify-content: space-evenly;
+}
+.cookieInfo {
+  border: 2px solid red;
+}
+.cookieInfo div {
+  /* margin: 0;
+  padding: 0; */
+}
+
+.shoppingCart {
+  border: 2px solid blue;
+  width: 80%;
+}
+.shoppingCart > p {
+  /* display: inline-flex; */
+}
+.btnBuy {
+  background-color: paleturquoise;
+}
+.btnBuy:hover {
+  background-color: purple;
+  color: white;
+}
+.boxes {
+  border: 2px black;
+  width: 200px;
+  display: flex;
+}
