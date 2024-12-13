@@ -1,9 +1,5 @@
 # cookies
 
-<h1 align="center">Hi 👋, I'm Michelle Ratcliffe</h1>
-<h3 align="center">A passionate frontend developer from South Africa, living in the UK.</h3>
-
-- 🌱 I’m currently learning **CSS, HTML & CSS**
 <h1> Cookie Clicker </h1>
 
 <h2>User Stories </h2>
